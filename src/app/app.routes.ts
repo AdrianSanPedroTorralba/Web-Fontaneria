@@ -7,7 +7,7 @@ export const routes: Routes = [
   {
     path: 'contacto',
     component: Contacto,
-    title: 'Contacto'
+    title: 'Instalaciones PTV-Contacto'
   }
 ];
 
