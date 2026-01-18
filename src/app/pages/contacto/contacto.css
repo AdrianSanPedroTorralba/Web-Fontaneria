@@ -1,0 +1,113 @@
+/* Variables para facilitar cambios de marca */
+:host {
+  --color-primario: #0d3b66;
+  --color-oscuro: #333;
+  --color-gris-suave: #f8f9fa;
+  --color-texto-secundario: #666;
+  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Hero Section --- */
+.hero-contacto {
+  background:  #0d3b66;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-contacto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* --- Grid de Información --- */
+.contacto-info {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.servicio-card {
+  background: var(--color-gris-suave);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.servicio-card h3 {
+  color: var(--color-primario);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.servicio-card p, .servicio-card ul {
+  color: var(--color-texto-secundario);
+  line-height: 1.6;
+}
+
+/* --- Estilos de Horario --- */
+.lista-horarios {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block; /* Centra la lista respecto a la card */
+}
+
+.lista-horarios li {
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 5px;
+}
+
+/* --- CTA Final --- */
+.cta-final {
+  background-color: var(--color-gris-suave);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cta-final h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.btn-principal {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-principal:hover {
+  background-color: #0056b3;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+  .hero-contacto h1 { font-size: 2rem; }
+  .servicios-grid { grid-template-columns: 1fr; }
+}
