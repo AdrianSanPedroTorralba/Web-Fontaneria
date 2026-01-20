@@ -5,6 +5,7 @@
   padding: 20px 40px;
   background-color: rgba(13, 59, 102, var(--nav-opacity, 0.6));
   color: white;
+  position: relative;
 }
 
 .brand-name {
@@ -17,6 +18,7 @@
   height: 50px;
   width: auto;
 }
+
 .menu {
   list-style: none;
   display: flex;
@@ -27,6 +29,13 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a.activo {
+  border-bottom: 3px solid #f4d35e;
+  padding-bottom: 4px;
 }
 
 .cta button {
@@ -35,4 +44,45 @@
   padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
+}
+
+/* HAMBURGUESA */
+.hamburger {
+  display: none; 
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    width: 100%;
+    background-color: #0d3b66;
+    padding: 20px 0;
+  }
+
+  .menu.mostrar {
+    display: flex; 
+  }
+
+  .menu li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .cta {
+    display: none; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
 }

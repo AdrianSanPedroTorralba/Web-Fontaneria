@@ -26,6 +26,29 @@ section {
   cursor: pointer;
 }
 
+/* BOTÓN LEER MÁS */
+.boton-leer-mas {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-leer-mas {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid #0d3b66;
+  color: #0d3b66;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+}
+
+.btn-leer-mas:hover {
+  background-color: #0d3b66;
+  color: white;
+}
+
 /* PRESENTACIÓN */
 .presentacion {
   background-color: white;

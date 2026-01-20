@@ -3,12 +3,37 @@
     <img class="brand-logo" src="assets/logo.png" alt="logo" aria-hidden="true" />
   </a>
 
-  <ul class="menu">
-    <li><a routerLink="/">Inicio</a></li>
-    <li><a routerLink="/servicios">Servicios</a></li>
-    <li><a routerLink="/sobreNosotros">Sobre nosotros</a></li>
-    <li><a routerLink="/contacto">Contacto</a></li>
-  </ul>
+ <!-- Botón hamburguesa -->
+  <button class="hamburger" (click)="toggleMenu()">
+    &#9776;
+  </button>
+
+<ul class="menu" [class.mostrar]="menuAbierto">
+  <li>
+    <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">
+      Inicio
+    </a>
+  </li>
+
+  <li>
+    <a routerLink="/servicios" routerLinkActive="activo">
+      Servicios
+    </a>
+  </li>
+
+  <li>
+    <a routerLink="/sobreNosotros" routerLinkActive="activo">
+      Sobre nosotros
+    </a>
+  </li>
+
+  <li>
+    <a routerLink="/contacto" routerLinkActive="activo">
+      Contacto
+    </a>
+  </li>
+</ul>
+
 
   <div class="cta">
     <button>Solicitar presupuesto</button>

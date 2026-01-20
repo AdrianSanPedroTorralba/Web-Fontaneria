@@ -27,7 +27,7 @@
 
 .about-content h2 {
     font-size: 28px;
-    color: #2bb3e6;
+    color: #0d3b66;
     margin-bottom: 25px;
     letter-spacing: 1px;
 }
@@ -43,8 +43,8 @@
     display: inline-block;
     margin-top: 20px;
     padding: 12px 26px;
-    border: 2px solid #2bb3e6;
-    color: #2bb3e6;
+    border: 2px solid #0d3b66;
+    color: #0d3b66;
     text-decoration: none;
     border-radius: 25px;
     font-size: 14px;
@@ -52,7 +52,7 @@
 }
 
 .about-button:hover {
-    background-color: #2bb3e6;
+    background-color: #0d3b66;
     color: #ffffff;
 }
 
