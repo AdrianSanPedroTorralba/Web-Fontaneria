@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: rgba(13, 59, 102, 0.6); /* Un poco transparente para ver el fondo */
+  background-color: rgba(13, 59, 102, var(--nav-opacity, 0.6));
   color: white;
 }
 

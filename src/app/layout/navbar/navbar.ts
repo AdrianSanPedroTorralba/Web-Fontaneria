@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -8,5 +8,10 @@ import { RouterLink } from "@angular/router";
   styleUrl: './navbar.css',
 })
 export class Navbar {
-
+  @Input() opacity: number = 0.6;
+  
+  @HostBinding('style.--nav-opacity')
+  get navOpacity() {
+    return this.opacity;
+  }
 }

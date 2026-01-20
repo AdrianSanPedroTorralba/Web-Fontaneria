@@ -15,6 +15,8 @@ export const routes: Routes = [
     path: 'servicios',
     component: Servicio,
     title: 'Instalaciones PTV-Servicios'
+  },
+  {
     path: 'sobreNosotros',
     component: SobreNosotros,
     title: 'Instalaciones PTV-Sobre-Nosotros'
