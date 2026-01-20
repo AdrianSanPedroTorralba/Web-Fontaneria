@@ -1,0 +1,64 @@
+header {
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh; /* Altura del header */
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
+}
+
+@media (min-width: 992px) {
+  /* Solo se activa si pones layout="horizontal" */
+  .hero-content.layout-horizontal {
+    flex-direction: row;       /* Alinea en fila */
+    justify-content: space-between;
+    text-align: left;          /* Texto a la izquierda */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 60px 40px;        /* Un poco más de aire lateral */
+  }
+
+  .layout-horizontal .hero-text {
+    flex: 1;
+    max-width: 650px;          /* Evita que el texto ocupe toda la pantalla */
+  }
+
+  .layout-horizontal h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .layout-horizontal .hero-botones {
+    flex: 0 0 auto;            /* Los botones ocupan solo lo que necesitan */
+    display: flex;
+    flex-direction: column;    /* Botones uno encima de otro como en Tafamiche */
+    gap: 15px;
+  }
+}
+
+/* Reutiliza el resto de tus estilos de la Navbar aquí */
+.brand-logo { height: 50px; }
+.menu { list-style: none; display: flex; gap: 20px; }
+.menu li a { color: white; text-decoration: none; }
+.cta button { background-color: #f4d35e; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; }
