@@ -1,0 +1,16 @@
+<header
+    [style.backgroundImage]="'linear-gradient(rgba(13, 59, 102, 0.7), rgba(13, 59, 102, 0.7)), url(' + backgroundImage + ')'">
+
+    <app-navbar></app-navbar>
+
+    @if (showHero) {
+    <div class="hero-content" [ngClass]="{'layout-horizontal': layout === 'horizontal'}">
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle }}</p>
+
+      <div class="extra-content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  }
+</header>

@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #0d3b66;
+  background-color: rgba(13, 59, 102, 0.6); /* Un poco transparente para ver el fondo */
   color: white;
 }
 
