@@ -90,9 +90,9 @@
 }
 
 .btn-principal {
-  background-color: var(--color-primario);
-  color: white;
-  border: none;
+  background-color: transparent;
+  border: 2px solid #0d3b66;
+  color: #0d3b66;
   padding: 15px 35px;
   font-size: 1.1rem;
   border-radius: 50px;
@@ -100,10 +100,24 @@
   font-weight: bold;
   transition: background 0.3s ease;
   margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn-principal:hover {
-  background-color: #0056b3;
+  background-color: #0d3b66;
+  color: white;
+}
+
+/* Links de contacto */
+.link-contacto {
+  color: var(--color-primario);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-contacto:hover {
+  text-decoration: underline;
 }
 
 /* --- Responsividad --- */

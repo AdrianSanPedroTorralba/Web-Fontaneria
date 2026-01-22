@@ -38,12 +38,27 @@
   padding-bottom: 4px;
 }
 
-.cta button {
-  background-color: #f4d35e;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+.cta {
+  display: flex;
+  align-items: center;
+}
+
+/* Botón llamar */
+.btn-llamar {
+  background-color: transparent;
+  border: 2px solid #f4d35e;
+  color: #f4d35e;
+  padding: 10px 22px;
   font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-llamar:hover {
+  background-color: #f4d35e;
+  color: #0d3b66;
 }
 
 /* HAMBURGUESA */

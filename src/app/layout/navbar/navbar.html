@@ -3,39 +3,41 @@
     <img class="brand-logo" src="assets/logo.png" alt="logo" aria-hidden="true" />
   </a>
 
- <!-- Botón hamburguesa -->
+  <!-- Botón hamburguesa -->
   <button class="hamburger" (click)="toggleMenu()">
     &#9776;
   </button>
 
-<ul class="menu" [class.mostrar]="menuAbierto">
-  <li>
-    <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">
-      Inicio
-    </a>
-  </li>
+  <ul class="menu" [class.mostrar]="menuAbierto">
+    <li>
+      <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">
+        Inicio
+      </a>
+    </li>
 
-  <li>
-    <a routerLink="/servicios" routerLinkActive="activo">
-      Servicios
-    </a>
-  </li>
+    <li>
+      <a routerLink="/servicios" routerLinkActive="activo">
+        Servicios
+      </a>
+    </li>
 
-  <li>
-    <a routerLink="/sobreNosotros" routerLinkActive="activo">
-      Sobre nosotros
-    </a>
-  </li>
+    <li>
+      <a routerLink="/sobreNosotros" routerLinkActive="activo">
+        Sobre nosotros
+      </a>
+    </li>
 
-  <li>
-    <a routerLink="/contacto" routerLinkActive="activo">
-      Contacto
-    </a>
-  </li>
-</ul>
+    <li>
+      <a routerLink="/contacto" routerLinkActive="activo">
+        Contacto
+      </a>
+    </li>
+  </ul>
 
 
   <div class="cta">
-    <button>Solicitar presupuesto</button>
+    <a href="tel:+34623533272" class="btn-llamar">
+      +34 623 533 272
+    </a>
   </div>
 </nav>
