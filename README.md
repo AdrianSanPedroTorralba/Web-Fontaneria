@@ -1,59 +1,43 @@
-# FontaneriaWeb
+# Instalaciones PTV - Web Corporativa Profesional
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+[![Angular](https://img.shields.io/badge/Angular-17%2B-DD0031?style=for-the-badge&logo=angular)](https://angular.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)](https://www.typescript.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## Development server
+Proyecto desarrollado para **Instalaciones PTV**, empresa especializada en fontanería y reformas. La aplicación se enfoca en la eficiencia técnica, SEO-friendly y una arquitectura de componentes reutilizables.
 
-To start a local development server, run:
+## 🚀 Arquitectura Técnica
 
-```bash
-ng serve
-```
+La web está construida bajo una arquitectura **Standalone** de Angular, priorizando la modularidad y el rendimiento:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* **Layout Dinámico:** Sistema de `Header` adaptativo con inyección de contenido vía `ng-content` y layouts configurables (Vertical/Horizontal).
+* **Gestión de Estilos:** Uso de **CSS Custom Properties** vinculadas a `@HostBinding` para manipulación de opacidad y temas en tiempo real sin recargas de DOM.
+* **Performance:** Configuración de `App Shell` y optimización de assets para un LCP (Largest Contentful Paint) optimizado.
+* **SEO:** Implementación de rutas semánticas y meta-tags dinámicos.
 
-## Code scaffolding
+## 🛠️ Stack Tecnológico
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* **Frontend:** Angular 17+ (Componentes Standalone).
+* **Lenguaje:** TypeScript (Tipado estricto para escalabilidad).
+* **Despliegue:** Compilación optimizada para servidores Apache con configuración de redireccionamiento vía `.htaccess`.
+* **Diseño:** CSS3 avanzado con metodología BEM y Flexbox/Grid responsivo.
 
-```bash
-ng generate component component-name
-```
+## 📦 Instalación y Desarrollo
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para ejecutar este proyecto en local:
 
-```bash
-ng generate --help
-```
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone https://github.com/AdrianSanPedroTorralba/Web-Fontaneria.git
+    ```
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+3.  **Servir en entorno de desarrollo:**
+    ```bash
+    ng serve
+    ```
+    Accede a `http://localhost:4200/`.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+© 2026 Instalaciones PTV. Todos los derechos reservados.
