@@ -1,7 +1,5 @@
 <app-header 
-  title="Fontanería profesional para tu hogar y tu negocio" 
-  subtitle="Servicios rápidos, eficaces y con garantía.
-      Solucionamos cualquier problema de fontanería con la máxima calidad." 
+  [dynamic]="true"
   backgroundImage="assets/header/heade.jpg">
   
 </app-header>
@@ -38,7 +36,7 @@
 
   <div class="servicios-grid">
 
-    <div class="servicio-card">
+    <div class="servicio-card" appFadeIn>
       <h3>Reparación de averías</h3>
       <p>
         Solucionamos fugas, roturas de tuberías, grifos y cualquier
@@ -46,7 +44,7 @@
       </p>
     </div>
 
-    <div class="servicio-card">
+    <div class="servicio-card" appFadeIn>
       <h3>Desatascos</h3>
       <p>
         Desatascamos fregaderos, inodoros y tuberías con maquinaria profesional
@@ -54,7 +52,7 @@
       </p>
     </div>
 
-    <div class="servicio-card">
+    <div class="servicio-card" appFadeIn>
       <h3>Instalaciones</h3>
       <p>
         Instalación completa de sistemas de fontanería en viviendas,
@@ -68,6 +66,37 @@
     <a routerLink="/servicios" class="btn-leer-mas">Todos Nuestros Servicios</a>
   </div>
 
+</section>
+
+
+<!-- FOTOVOLTAICA PREVIA -->
+<section class="fotovoltaica-inicio">
+  <div class="contenedor">
+    <h2>Energía Solar Fotovoltaica</h2>
+    <p class="subtitulo">¡Pásate al autoconsumo y empieza a ahorrar!</p>
+
+    <div class="solar-grid">
+      <div class="fotovol-card" appFadeIn>
+        <div class="icon">☀️</div>
+        <h4>Autoconsumo</h4>
+        <p>Reduce hasta un 70% tu factura de la luz.</p>
+      </div>
+      <div class="fotovol-card" appFadeIn>
+        <div class="icon">🌿</div>
+        <h4>Sostenibilidad</h4>
+        <p>Energía 100% limpia para un futuro mejor.</p>
+      </div>
+      <div class="fotovol-card" appFadeIn>
+        <div class="icon">📈</div>
+        <h4>Rentabilidad</h4>
+        <p>Amortización rápida de tu inversión.</p>
+      </div>
+    </div>
+
+    <div class="boton-leer-mas">
+      <a routerLink="/fotovoltaica" class="btn-leer-mas">Descubre nuestras soluciones solares</a>
+    </div>
+  </div>
 </section>
 
 

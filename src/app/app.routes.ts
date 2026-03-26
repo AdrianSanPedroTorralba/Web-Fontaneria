@@ -3,9 +3,10 @@ import { Inicio } from './pages/inicio/inicio';
 import { Contacto } from './pages/contacto/contacto';
 import { Servicio } from './pages/servicio/servicio';
 import { SobreNosotros } from './pages/sobre-nosotros/sobre-nosotros';
+import { Fotovoltaica } from './pages/fotovoltaica/fotovoltaica';
 
 export const routes: Routes = [
-  { path: '', component: Inicio },
+  { path: '', component: Inicio, title: '' },
   {
     path: 'contacto',
     component: Contacto,
@@ -20,6 +21,11 @@ export const routes: Routes = [
     path: 'sobreNosotros',
     component: SobreNosotros,
     title: 'Instalaciones PTV-Sobre-Nosotros'
+  },
+  {
+    path: 'fotovoltaica',
+    component: Fotovoltaica,
+    title: 'Instalaciones PTV-Fotovoltaica'
   }
 ];
 

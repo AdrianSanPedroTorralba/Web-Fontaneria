@@ -1,12 +1,12 @@
 <header
-    [style.backgroundImage]="'linear-gradient(rgba(13, 59, 102, 0.7), rgba(13, 59, 102, 0.7)), url(' + backgroundImage + ')'">
+    [style.backgroundImage]="'linear-gradient(rgba(13, 59, 102, 0.7), rgba(13, 59, 102, 0.7)), url(' + displayImage + ')'">
 
     <app-navbar></app-navbar>
 
     @if (showHero) {
-    <div class="hero-content" [ngClass]="{'layout-horizontal': layout === 'horizontal'}">
-      <h1>{{ title }}</h1>
-      <p>{{ subtitle }}</p>
+    <div class="hero-content" [ngClass]="{'layout-horizontal': layout === 'horizontal', 'fade-in-out': dynamic}">
+      <h1>{{ displayTitle }}</h1>
+      <p>{{ displaySubtitle }}</p>
 
       <div class="extra-content">
         <ng-content></ng-content>

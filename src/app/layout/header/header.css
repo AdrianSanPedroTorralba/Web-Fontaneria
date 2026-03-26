@@ -1,9 +1,38 @@
+.fade-in-out h1,
+.fade-in-out p {
+  animation: fadeInOut 5s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
 header {
   background-size: cover;
   background-position: center;
-  min-height: 60vh; /* Altura del header */
+  min-height: 60vh;
+  /* Altura del header */
   display: flex;
   flex-direction: column;
+  transition: background-image 1s ease-in-out;
 }
 
 .hero-content {
@@ -29,20 +58,25 @@ header {
 }
 
 @media (min-width: 992px) {
+
   /* Solo se activa si pones layout="horizontal" */
   .hero-content.layout-horizontal {
-    flex-direction: row;       /* Alinea en fila */
+    flex-direction: row;
+    /* Alinea en fila */
     justify-content: space-between;
-    text-align: left;          /* Texto a la izquierda */
+    text-align: left;
+    /* Texto a la izquierda */
     max-width: 1200px;
     margin: 0 auto;
     gap: 40px;
-    padding: 60px 40px;        /* Un poco más de aire lateral */
+    padding: 60px 40px;
+    /* Un poco más de aire lateral */
   }
 
   .layout-horizontal .hero-text {
     flex: 1;
-    max-width: 650px;          /* Evita que el texto ocupe toda la pantalla */
+    max-width: 650px;
+    /* Evita que el texto ocupe toda la pantalla */
   }
 
   .layout-horizontal h1 {
@@ -50,15 +84,35 @@ header {
   }
 
   .layout-horizontal .hero-botones {
-    flex: 0 0 auto;            /* Los botones ocupan solo lo que necesitan */
+    flex: 0 0 auto;
+    /* Los botones ocupan solo lo que necesitan */
     display: flex;
-    flex-direction: column;    /* Botones uno encima de otro como en Tafamiche */
+    flex-direction: column;
+    /* Botones uno encima de otro como en Tafamiche */
     gap: 15px;
   }
 }
 
 /* Reutiliza el resto de tus estilos de la Navbar aquí */
-.brand-logo { height: 50px; }
-.menu { list-style: none; display: flex; gap: 20px; }
-.menu li a { color: white; text-decoration: none; }
-.cta button { background-color: #f4d35e; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; }
+.brand-logo {
+  height: 50px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.cta button {
+  background-color: #f4d35e;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
