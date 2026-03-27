@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Navbar } from '../navbar/navbar';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.css',
 })
 export class Header implements OnInit, OnDestroy {
+
   @Input() title: string = '';
   @Input() subtitle: string = '';
   @Input() backgroundImage: string = '';
@@ -20,7 +21,12 @@ export class Header implements OnInit, OnDestroy {
   displayTitle: string = '';
   displaySubtitle: string = '';
   displayImage: string = '';
-  
+
+  private currentIndex = 0;
+  private intervalId: any;
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
   private messages = [
     {
       title: 'Fontanería profesional para tu hogar y tu negocio',
@@ -33,18 +39,17 @@ export class Header implements OnInit, OnDestroy {
       image: 'assets/header/FondoPlacas.png'
     }
   ];
-  
-  private currentIndex = 0;
-  private intervalId: any;
 
   ngOnInit() {
-    this.displayTitle = this.title;
-    this.displaySubtitle = this.subtitle;
-    this.displayImage = this.backgroundImage;
 
     if (this.dynamic) {
       this.startCycle();
+    } else {
+      this.displayTitle = this.title;
+      this.displaySubtitle = this.subtitle;
+      this.displayImage = this.backgroundImage;
     }
+
   }
 
   ngOnDestroy() {
@@ -54,15 +59,26 @@ export class Header implements OnInit, OnDestroy {
   }
 
   private startCycle() {
-    this.displayTitle = this.messages[0].title;
-    this.displaySubtitle = this.messages[0].subtitle;
-    this.displayImage = this.messages[0].image;
+
+    this.currentIndex = 0;
+
+    this.updateMessage();
 
     this.intervalId = setInterval(() => {
+
       this.currentIndex = (this.currentIndex + 1) % this.messages.length;
-      this.displayTitle = this.messages[this.currentIndex].title;
-      this.displaySubtitle = this.messages[this.currentIndex].subtitle;
-      this.displayImage = this.messages[this.currentIndex].image;
+
+      this.updateMessage();
+
+      this.cdr.detectChanges(); // 👈 esto hace que Angular refresque el texto
+
     }, 5000);
   }
+
+  private updateMessage() {
+    this.displayTitle = this.messages[this.currentIndex].title;
+    this.displaySubtitle = this.messages[this.currentIndex].subtitle;
+    this.displayImage = this.messages[this.currentIndex].image;
+  }
+
 }

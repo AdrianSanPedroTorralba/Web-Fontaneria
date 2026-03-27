@@ -7,7 +7,7 @@ import { FadeInDirective } from '../../directives/fade-in.directive';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [Header, RouterModule, FadeInDirective],
+  imports: [Header, RouterModule],
   templateUrl: './inicio.html',
   styleUrl: './inicio.css',
 })
